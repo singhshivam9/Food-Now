@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD NOW - Fast Food Delivery</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="food-now.png">
+</head>
+
+<body>
+
+    <!-- 
+    ==================================
+    HEADER & NAVIGATION
+    ==================================
+    -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo nav-link" data-page="home">FOOD<span>NOW</span> </a>
+
+            <ul class="nav-links">
+                <li><a class="nav-link active" data-page="home">Home</a></li>
+                <li><a class="nav-link" data-page="menu">Menu</a></li>
+                <li><a class="nav-link" data-page="about">About</a></li>
+                <!-- <li><a class="nav-link" data-page="blog">Blog</a></li> -->
+                <li><a class="nav-link" data-page="contact">Contact</a></li>
+                <li><a class="nav-link login-btn" data-page="login">Login</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <!-- New AI Button -->
+                <!-- <button class="ai-btn" id="ask-ai-btn">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 3C6.5 3 3 6.5 3 12s3.5 9 9 9 9-3.5 9-9-3.5-9-9-9z" />
+                        <path d="M9.5 9.5c.6-.6 1.4-1 2.5-1s1.9.4 2.5 1" />
+                        <path d="M15.5 15.5c-.6.6-1.4 1-2.5 1s-1.9-.4-2.5-1" />
+                        <path d="M9 12h.01" />
+                        <path d="M15 12h.01" />
+                    </svg>
+                    <span>Ask AI</span>
+                </button> -->
+
+                <a class="cart-icon" data-page="cart">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                        </path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+
+                <div class="hamburger">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+    ==================================
+    MOBILE NAVIGATION (SLIDE-IN)
+    ==================================
+    -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-close">
+            <svg class="icon" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a class="mobile-nav-link" data-page="home">Home</a></li>
+            <li><a class="mobile-nav-link" data-page="menu">Menu</a></li>
+            <li><a class="mobile-nav-link" data-page="about">About</a></li>
+            <!-- <li><a class="mobile-nav-link" data-page="blog">Blog</a></li> -->
+            <li><a class="mobile-nav-link" data-page="contact">Contact</a></li>
+            <li><a class="mobile-nav-link login-btn" data-page="login">Login / Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- 
+    ==================================
+    MAIN CONTENT (PAGE CONTAINER)
+    ==================================
+    -->
+    <main class="container">
+
+        <!-- 
+        ==================================
+        PAGE: HOME (Default Active Page)
+        ==================================
+        -->
+        <section id="page-home" class="page active" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 class="hero-title">Hungry? You're in the right place.</h1>
+                <p class="hero-subtitle">Order from the best local restaurants, delivered fast.</p>
+
+                <div class="hero-search">
+                    <div class="search-bar">
+                        <svg class="icon" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" id="hero-search-input" placeholder="Search for food, category...">
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-primary nav-link" data-page="menu" style="padding: 10px; background-color: orange; color: black; font-weight: bolder;" >Explore Full Menu</a>
+            </section>
+
+            <!-- Categories Section -->
+            <section class="categories">
+                <h2 class="section-title">Popular Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card card nav-link" data-page="menu" data-category="Pizza">
+                        <img src="https://www.foodandwine.com/thmb/iJw7N_NfcPpd-EB8rpYbzrkSFIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tomato-mozzarella-pizza-FT-RECIPE0725-e7244e979c504188a049623668c15b2e.jpg" alt="Pizza">
+                        <h3>Pizza</h3>
+                    </div>
+                    <div class="category-card card nav-link" data-page="menu" data-category="Burgers">
+                        <img src="https://media.istockphoto.com/id/1489417428/photo/crispy-aloo-tikki-burger.webp?a=1&b=1&s=612x612&w=0&k=20&c=FCi1GDnS38NCrQfEBx3nxRTuoITPesueZFkMkvhlyBI=" alt="Burgers">
+                        <h3>Burger</h3>
+                    </div>
+                    <div class="category-card card nav-link" data-page="menu" data-category="Biryani">
+                        <img src="https://i.ytimg.com/vi/Do7ZdUodDdw/maxresdefault.jpg" alt="Biryani">
+                        <h3>Biryani</h3>
+                    </div>
+                    <div class="category-card card nav-link" data-page="menu" data-category="Indian">
+                        <img src="https://media.istockphoto.com/id/1665320059/photo/indian-paneer-butter-masala-directly-above-photo-on-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=SUResIg0QTtf-m2zfXj4ZMO9IJlXwYKX1JZEvr5yvP8=" alt="Indian">
+                        <h3>Indian</h3>
+                    </div>
+                    <div class="category-card card nav-link" data-page="menu" data-category="Desserts">
+                        <img src="https://pipingpotcurry.com/wp-content/uploads/2023/12/Gulab-Jamun-Recipe-Piping-Pot-Curry.jpg" alt="Desserts">
+                        <h3>Dessert</h3>
+                    </div>
+                    <div class="category-card card nav-link" data-page="menu" data-category="Drinks">
+                        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2021/10/Indian-Mango-Lassi-with-Fresh-Mangoes.jpg" alt="Drinks">
+                        <h3>Drinks</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Items Section -->
+            <section class="featured">
+                <h2 class="section-title">Top Picks</h2>
+                <div class="featured-grid" id="featured-grid-container">
+                    <!-- Featured items will be dynamically injected here by JS -->
+                </div>
+            </section>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: MENU
+        ==================================
+        -->
+        <section id="page-menu" class="page">
+            <div class="menu-header">
+                <h1 class="page-title">Our Full Menu</h1>
+                <div class="search-bar menu-search">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" id="menu-search-input" placeholder="Search by name, category, or keyword...">
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menu-grid-container">
+                <!-- All menu items will be dynamically injected here by JS -->
+                <p id="menu-no-results"
+                    style="display: none; text-align: center; grid-column: 1 / -1; font-size: 1.2rem;">No items found
+                    matching your search.</p>
+            </div>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: CART
+        ==================================
+        -->
+        <section id="page-cart" class="page">
+            <h1 class="page-title">Your Cart</h1>
+            <div id="cart-content-wrapper">
+                <!-- This wrapper will be replaced by JS -->
+            </div>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: CHECKOUT
+        ==================================
+        -->
+        <section id="page-checkout" class="page" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+            <h1 class="page-title">Checkout</h1>
+            <div class="checkout-container">
+                <div class="checkout-form card">
+                    <h3>Billing Details</h3>
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="checkout-name">Full Name</label>
+                            <input type="text" id="checkout-name" placeholder="Full name" required>
+                            <span class="error-message" id="name-error">Name must contain only letters and
+                                spaces.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-phone">Mobile Number</label>
+                            <input type="tel" id="checkout-phone" placeholder="Mobile Number" required>
+                            <span class="error-message" id="phone-error">Phone number must be exactly 10 digits.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-address">Full Address</label>
+                            <textarea id="checkout-address" rows="4"
+                                placeholder="Full address" required></textarea>
+                            <span class="error-message" id="address-error">Address must be at least 10 characters
+                                long.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Place Order</button>
+                    </form>
+                </div>
+
+                <div class="order-summary card" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+                    <h3>Your Order</h3>
+                    <div id="checkout-summary-items">
+                        <!-- Checkout summary items injected by JS -->
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="checkout-summary-total">₹0.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: ORDER SUCCESS
+        ==================================
+        -->
+        <section id="page-order-success" class="page" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+            <div class="success-container card">
+                <svg class="icon success-icon" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for your purchase. Your food is on its way!</p>
+
+                <div class="order-details" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+                    <p><span>Order ID:</span> <span id="success-order-id"></span></p>
+                    <p><span>Name:</span> <span id="success-user-name"></span></p>
+                    <p><span>Mobile:</span> <span id="success-user-phone"></span></p>
+                    <p><span>Address:</span> <span id="success-user-address"></span></p>
+                    <p><span>Total Paid:</span> <strong id="success-total-price"></strong></p>
+                    <p><span>Est. Delivery:</span> <strong>30-45 Minutes</strong></p>
+                </div>
+
+                <a href="#" class="btn btn-primary nav-link" data-page="home">Back to Home</a>
+            </div>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: ABOUT
+        ==================================
+        -->
+        <section id="page-about" class="page" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <h1 class="page-title">About FOOD NOW</h1>
+            <div class="static-page-content card">
+                <h3>Our Mission</h3>
+                <p>Our mission is to empower local restaurants and food businesses by helping them grow online. Many small vendors have great food but limited reach, so we aim to bridge that gap by providing a simple, effective platform where customers can easily browse menus and place orders directly from their website. By bringing their business online, restaurants can reach more people, increase daily orders, and earn extra income without any complicated setup. We want to support local talent, boost visibility, and make delicious food more accessible to everyone. Together, we help local food businesses expand and thrive in the digital world. <br>From Team (Shivam Singh,Shivam Giri,Shubham Singh,Rohan,Satyam Shukla)</p>
+
+                <!-- <h3>Our Story</h3>
+                <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui
+                    posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam
+                    vehicula elementum sed sit amet dui.</p> -->
+            </div>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: BLOG
+        ==================================
+        -->
+        <!-- <section id="page-blog" class="page">
+            <h1 class="page-title">Our Blog</h1>
+            <div class="static-page-content card">
+                <h3>The 5 Best Biryanis You Must Try</h3>
+                <p>Posted on: Nov 10, 2025</p>
+                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie
+                    malesuada. Pellentesque in ipsum id orci porta dapibus...</p>
+                <a href="#" class="btn btn-secondary btn-small">Read More</a>
+            </div>
+        </section> -->
+
+        <!-- 
+        ==================================
+        PAGE: CONTACT
+        ==================================
+        -->
+        <section id="page-contact" class="page" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+            <h1 class="page-title">Contact Us</h1>
+            <div class="static-page-content card">
+                <p>Have a question or a problem? Get in touch with us!</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="5" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 
+        ==================================
+        PAGE: LOGIN / SIGNUP
+        ==================================
+        -->
+        <section id="page-login" class="page" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+            <div class="login-container card">
+                <h2 id="login-title">Login</h2>
+
+                <!-- Login Form -->
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+                <!-- Signup Form (hidden by default) -->
+                <form id="signup-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="John M. Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+
+                <p class="toggle-form">
+                    <span id="toggle-text">Need an account?</span>
+                    <span id="toggle-link" data-action="signup">Sign up</span>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 
+    ==================================
+    FOOTER
+    ==================================
+    -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="logo" style="color: #fff;">FOOD<span>NOW</span></h3>
+                    <p>The best food, delivered fast to your door. Your cravings, satisfied.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><svg class="icon" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg></a>
+                        <a href="https://x.com/"><svg class="icon" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg></a>
+                        <a href="https://www.instagram.com/"><svg class="icon" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.225-.148-4.771-1.664-4.919-4.919-.058-1.265-.07-1.645-.07-4.849 0-3.205.012 3.584.07-4.849.148-3.227 1.691-4.771 4.919-4.919A110.94 110.94 0 0112 2.163z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a class="nav-link" data-page="home" href="#">Home</a></li>
+                        <li><a class="nav-link" data-page="menu" href="#">Menu</a></li>
+                        <li><a class="nav-link" data-page="about" href="#">About Us</a></li>
+                        <li><a class="nav-link" data-page="contact" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Shahdara , Delhi , 110032</p>
+                    <p>hello@foodnow.in</p>
+                    <p>(+91) 0000-0000-00</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 FOOD NOW. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+    ==================================
+    NEW: AI ASSISTANT MODAL
+    ==================================
+    -->
+    <!-- <div class="modal-overlay" id="ai-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 3C6.5 3 3 6.5 3 12s3.5 9 9 9 9-3.5 9-9-3.5-9-9-9z" />
+                        <path d="M9.5 9.5c.6-.6 1.4-1 2.5-1s1.9.4 2.5 1" />
+                        <path d="M15.5 15.5c-.6.6-1.4 1-2.5 1s-1.9-.4-2.5-1" />
+                        <path d="M9 12h.01" />
+                        <path d="M15 12h.01" />
+                    </svg>
+                    Foodie AI Assistant
+                </h3>
+                <button class="modal-close-btn" id="ai-modal-close-btn">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="ai-chat-box" id="ai-chat-box">
+                <div class="chat-message ai">
+                    Hi! I'm Foodie AI. What are you in the mood for? (e.g., "something spicy", "a healthy lunch", "veg
+                    breakfast")
+                </div>
+            </div>
+            <div class="modal-input">
+                <input type="text" id="ai-input" placeholder="Type your craving...">
+                <button id="ai-send-btn">
+                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2L11 13" />
+                        <path d="M22 2L15 22l-4-9-9-4L22 2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- 
+    ==================================
+    ==================================
+    JAVASCRIPT LOGIC
+    ==================================
+    ==================================
+    -->
+    <script src="script.js"></script>
+</body>
+
+</html>
